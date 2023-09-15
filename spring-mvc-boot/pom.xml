@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+	<parent>
+        <groupId>neo.ehsanodyssey.java.spring</groupId>
+        <artifactId>neo-spring</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+	
+    <artifactId>spring-mvc-boot</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+
+    <modules>
+        <module>mvc-m1-boot-config</module>
+        <module>mvc-m2-boot-config-props</module>
+        <module>mvc-m3-boot-thymeleaf</module>
+        <module>mvc-m4-boot-war</module>
+        <module>mvc-m5-request-processing</module>
+        <module>mvc-m6-ui-tags</module>
+        <module>mvc-m7-adv-databinding</module>
+        <module>mvc-m8-model-attribute</module>
+        <module>mvc-m9-session-attribute</module>
+        <module>mvc-m10-req-res-body</module>
+        <module>mvc-m11-validator</module>
+        <module>mvc-m12-bean-validation</module>
+        <module>mvc-m13-exception-handling</module>
+        <module>mvc-m14-chaining-view-resolvers</module>
+        <module>mvc-m15-content-negotiation</module>
+        <module>mvc-m16-redirect-attribute</module>
+        <module>mvc-m17-flash-attribute</module>
+        <module>mvc-m18-handler-interceptor</module>
+        <module>mvc-m19-bean-scopes</module>
+        <module>mvc-m20-controller-advice</module>
+        <module>mvc-m21-databinding-with-converters</module>
+        <module>mvc-m22-fileupload</module>
+        <module>mvc-m23-security-cors</module>
+        <module>mvc-m24-security-csrf</module>
+        <module>mvc-m25-testing</module>
+        <module>mvc-m26-async-requests</module>
+        <module>mvc-m27-reactive-webflux</module>
+    </modules>
+	
+	<properties>
+        <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
+    </properties>
+	
+	<dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+	
+	<build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

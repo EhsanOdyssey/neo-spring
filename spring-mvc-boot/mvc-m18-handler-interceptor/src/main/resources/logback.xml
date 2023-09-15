@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ####### NEO Colorful Console ####### -->
+<configuration>
+    <property scope="context" name="LEVEL_COLORS"
+              value="error[bold_red],warn[bright_yellow],info[cyan],debug[bright_green],trace[bright_blue]"/>
+    <property scope="context" name="LOG_PATTERN"
+              value="%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){bright_magenta} %clr([ %-5p ]){level} %clr([){blue} %clr(%t){bright_magenta} %clr(] -- ){blue} %clr(%logger{30} : %L){bright_magenta} %clr(=>){blue} %clr(%msg){cyan} %wex%n"/>
+    <conversionRule conversionWord="clr"
+                    converterClass="neo.ehsanodyssey.java.spring.neologger.NeoConverter"/>
+    <conversionRule conversionWord="wex"
+                    converterClass="neo.ehsanodyssey.java.spring.neologger.WhitespaceThrowableProxyConverter"/>
+    <appender name="default" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+            <charset>utf-8</charset>
+        </encoder>
+    </appender>
+    <root level="info">
+        <appender-ref ref="default"/>
+    </root>
+</configuration>
